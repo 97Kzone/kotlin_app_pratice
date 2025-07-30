@@ -1,6 +1,5 @@
 package com.group.libraryapp.calculator
 
-
 fun main() {
     val calculatorTest = CalculatorTest()
     calculatorTest.addTest()
@@ -48,5 +47,34 @@ class CalculatorTest {
         if (calculator.number != 15) {
             throw IllegalArgumentException()
         }
+    }
+
+    fun divideTest() {
+        // given
+        var calculator = Calculator(5)
+
+        // when
+        calculator.divide(2)
+
+        // then
+        if (calculator.number != 2) {
+            throw IllegalArgumentException()
+        }
+    }
+
+    fun divideExceptionTest() {
+        // given
+        var calculator = Calculator(5)
+
+        // when
+        try {
+            calculator.divide(0)
+        } catch (e: IllegalArgumentException) {
+            return
+        } catch (e: Exception) {
+            throw IllegalArgumentException()
+        }
+
+        throw IllegalArgumentException("기대하는 에러가 발생하지 않음")
     }
 }
