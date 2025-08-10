@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.682s</div>
+<div class="counter">0.541s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">75%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,120 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="loanBookFailTest()"></a>
-<h3 class="failures">책이 진작 대출되어 있다면 신규대출 실패</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: 
-expected: &quot;진작 대출되어 있는 책입니다&quot;
- but was: java.lang.IllegalArgumentException: 진작 대출되어 있는 책입니다
-	at com.group.libraryapp.service.book.BookService.loanBook(BookService.java:41)
-	at com.group.libraryapp.service.book.BookService$$FastClassBySpringCGLIB$$9fdbff4c.invoke(&lt;generated&gt;)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	...(94 remaining lines not displayed - this can be changed with Assertions.setMaxStackTraceElementsDisplayed)
-	at java.base@11.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@11.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base@11.0.7/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at app//com.group.libraryapp.service.book.BookServiceTest.loanBookFailTest(BookServiceTest.kt:80)
-	at java.base@11.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.7/java.lang.reflect.Method.invoke(Method.java:566)
-	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at app//org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at app//org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base@11.0.7/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base@11.0.7/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base@11.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.7/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -188,38 +81,38 @@ expected: &quot;진작 대출되어 있는 책입니다&quot;
 <tr>
 <td class="success">책 대출이 정상 동작</td>
 <td class="success">loanBook()</td>
-<td class="success">0.074s</td>
+<td class="success">0.040s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">책이 진작 대출되어 있다면 신규대출 실패</td>
-<td class="failures">loanBookFailTest()</td>
-<td class="failures">0.153s</td>
-<td class="failures">failed</td>
+<td class="success">책이 진작 대출되어 있다면 신규대출 실패</td>
+<td class="success">loanBookFailTest()</td>
+<td class="success">0.121s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">책 반납이 정상 동작한다</td>
 <td class="success">returnBookTest()</td>
-<td class="success">0.059s</td>
+<td class="success">0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">책 등록이 정상 동작</td>
 <td class="success">saveBook()</td>
-<td class="success">0.396s</td>
+<td class="success">0.347s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2025-08-10 23:29:27.119  INFO 14828 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.group.libraryapp.service.book.BookServiceTest], using SpringBootContextLoader
-2025-08-10 23:29:27.122  INFO 14828 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.group.libraryapp.service.book.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2025-08-10 23:29:27.122  INFO 14828 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.book.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-08-10 23:29:27.138  INFO 14828 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.book.BookServiceTest
-2025-08-10 23:29:27.143  INFO 14828 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2025-08-10 23:29:27.144  INFO 14828 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a1dd8eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4def900a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5e1bfe66, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6c399d4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@726dd367, org.springframework.test.context.support.DirtiesContextTestExecutionListener@433362e0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@425a5c2e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@58cd6088, org.springframework.test.context.event.EventPublishingTestExecutionListener@44a7661d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1cdb280b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@cf0bc92, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f8a44a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@40625ac6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@53cb9b1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c2191a8]
+<pre>2025-08-11 00:14:39.073  INFO 26224 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.group.libraryapp.service.book.BookServiceTest], using SpringBootContextLoader
+2025-08-11 00:14:39.073  INFO 26224 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.group.libraryapp.service.book.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-08-11 00:14:39.073  INFO 26224 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.book.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-11 00:14:39.087  INFO 26224 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.book.BookServiceTest
+2025-08-11 00:14:39.092  INFO 26224 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-08-11 00:14:39.093  INFO 26224 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@232899d1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@522221e1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@14060410, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@58397dd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@620260ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@216c6825, org.springframework.test.context.transaction.TransactionalTestExecutionListener@56ece9c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c4a8c93, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d3c80bf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f53e07d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5c3ad125, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@145ce025, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1deca369, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2d0ce8a1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2735a7dc]
 Hibernate: 
     insert 
     into
@@ -575,7 +468,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2025. 8. 10. 오후 11:29:28</p>
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 2025. 8. 11. 오전 12:14:40</p>
 </div>
 </div>
 </body>
