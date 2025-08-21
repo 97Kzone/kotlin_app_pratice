@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.group.libraryapp.JUnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-21T16:10:03" hostname="DESKTOP-P5VUQFA" time="0.012">
+<testsuite name="com.group.libraryapp.JUnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-21T16:15:38" hostname="DESKTOP-P5VUQFA" time="0.011">
   <properties/>
   <testcase name="test1()" classname="com.group.libraryapp.JUnitTest" time="0.01"/>
-  <testcase name="test2()" classname="com.group.libraryapp.JUnitTest" time="0.001"/>
+  <testcase name="test2()" classname="com.group.libraryapp.JUnitTest" time="0.0"/>
   <system-out><![CDATA[Before All Test
 before Test
 test1
